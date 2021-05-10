@@ -1,0 +1,54 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red251\green24\blue39;\red190\green0\blue135;\red14\green110\blue109;
+\red25\green68\blue35;\red16\green131\blue255;\red48\green198\blue39;\red41\green15\blue109;\red82\green72\blue255;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c98431\c9412\c15294;\csgenericrgb\c74510\c0\c52941;\csgenericrgb\c5490\c43137\c42745;
+\csgenericrgb\c9804\c26667\c13725;\csgenericrgb\c6275\c51373\c100000;\csgenericrgb\c18824\c77647\c15294;\csgenericrgb\c16078\c5882\c42745;\csgenericrgb\c32157\c28235\c100000;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21600\viewh17400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf1 \cb0 #include \cf2 <iostream>\
+\cf1 #include \cf2 <string>\
+\cf1 #include \cf2 <cstdlib>\
+\cf1 #include \cf2 <vector>\
+\cf1 #include \cf2 <fstream>\
+\cf1 #include \cf2 <queue>\
+\cf1 #include \cf2 <cmath>\
+\cf1 #include \cf2 <algorithm>\
+\cf1 #include \cf2 <cstdio>\
+\cf1 #include \cf2 <sstream>\
+\cf1 #include \cf2 <set>\
+\cf3 using namespace \cf4 std\cf1 ;\
+#define 
+\f1\b \cf5 LOCAL\
+\
+
+\f0\b0 \cf3 int \cf6 main\cf1 ()\{\
+#ifdef 
+\f1\b \cf5 LOCAL\
+    
+\f0\b0 \cf6 freopen\cf1 (\cf2 "/Users/robertwong/CLionProjects/untitled2/dataIn.txt"\cf1 ,\cf2 "r"\cf1 ,
+\f1\b \cf5 stdin
+\f0\b0 \cf1 );\
+    \cf7 //freopen("/Users/robertwong/CLionProjects/untitled2/dataOut.txt","w",stdout);\
+\cf1 #endif\
+   \cf4 set\cf1 <\cf8 string\cf1 > dict;\
+   \cf8 string \cf1 s,buf;\
+   \cf3 while\cf1 (cin\cf4 >>\cf1 s)\{\
+       \cf3 for \cf1 (\cf3 int \cf1 i = \cf9 0\cf1 ; i < s.\cf6 length\cf1 (); i++)\{\
+           \cf3 if\cf1 (\cf6 isalpha\cf1 (s\cf4 [\cf1 i\cf4 ]\cf1 )) s\cf4 [\cf1 i\cf4 ] \cf1 =\cf6 tolower\cf1 (s\cf4 [\cf1 i\cf4 ]\cf1 ); \cf3 else \cf1 s\cf4 [\cf1 i\cf4 ] \cf1 =\cf2 ' '\cf1 ;\}\
+       \cf8 stringstream \cf1 ss(s);\
+       \cf3 while\cf1 (ss\cf4 >>\cf1 buf) dict.\cf6 insert\cf1 (buf);\
+       \cf7 //dict.insert(s);\
+\
+   \cf1 \}\
+   \cf3 for\cf1 (\cf4 set\cf1 <\cf8 string\cf1 >::\cf8 iterator \cf1 it = dict.\cf6 begin\cf1 (); it \cf4 != \cf1 dict.\cf6 end\cf1 ();\cf4 ++\cf1 it)\
+       cout\cf4 << *\cf1 it \cf4 <<\cf6 endl\cf1 ;\
+   cout\cf4 <<\cf2 "what the hell..."\cf1 ;\
+   \cf3 return \cf9 0\cf1 ;\
+\}\
+\
+\
+}

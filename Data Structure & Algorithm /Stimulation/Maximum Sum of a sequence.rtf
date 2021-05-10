@@ -1,0 +1,70 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red72\green102\blue181;\red32\green32\blue32;\red207\green160\blue89;
+\red158\green166\blue175;\red153\green168\blue186;\red74\green100\blue169;\red31\green99\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c28235\c40000\c70980;\csgenericrgb\c12549\c12549\c12549;\csgenericrgb\c81176\c62745\c34902;
+\csgenericrgb\c61961\c65098\c68627;\csgenericrgb\c60000\c65882\c72941;\csgenericrgb\c29020\c39216\c66275;\csgenericrgb\c12157\c38824\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Maximum	 Sum of a sequence	.\
+Here are some ways to solve it.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs28 \cf2 \cb3 int \cf4 maxf\cf5 (\cf2 int \cf5 *\cf6 arr\cf7 ,\cf2 int \cf6 left\cf7 ,\cf2 int \cf6 right\cf5 )\
+\{\
+    \cf2 if\cf5 (\cf6 left\cf5 ==\cf6 right\cf5 )\{\
+        \cf2 if\cf5 ( \cf6 arr\cf5 [\cf6 left\cf5 ]>\cf8 0\cf5 )\
+            \cf2 return \cf6 arr\cf5 [\cf6 left\cf5 ]\cf2 ;\
+        else\
+            return \cf8 0\cf2 ;\
+    \cf5 \}\
+    \cf2 else \cf5 \{\
+        \cf2 int \cf6 boder \cf5 = (\cf6 right \cf5 +\cf6 left\cf5 ) / \cf8 2\cf2 ;\
+        int \cf6 max_left \cf5 = maxf(\cf6 arr\cf7 , \cf6 left\cf7 , \cf6 boder  \cf5 )\cf2 ;\
+        int \cf6 max_right \cf5 = maxf(\cf6 arr\cf7 , \cf6 boder\cf5 +\cf8 1\cf7 , \cf6 right\cf5 )\cf2 ;\
+\
+        int \cf6 sum1 \cf5 = \cf8 0\cf2 ;\
+        int \cf6 max1 \cf5 = \cf8 0\cf2 ;\
+        for \cf5 (\cf2 int \cf6 i \cf5 = \cf6 boder \cf2 ; \cf6 i \cf5 >=\cf6 left\cf2 ; \cf5 --\cf6 i\cf5 ) \{\
+            \cf6 sum1 \cf5 += \cf6 arr\cf5 [\cf6 i\cf5 ]\cf2 ;\
+            if \cf5 (\cf6 sum1 \cf5 > \cf6 max1\cf5 )\cf2 ;\
+            \cf6 max1 \cf5 = \cf6 sum1\cf2 ;\
+        \cf5 \}\
+        \cf2 int \cf6 sum2 \cf5 = \cf8 0\cf2 ;\
+        int \cf6 max2 \cf5 = \cf8 0\cf2 ;\
+        for \cf5 (\cf2 int \cf6 i \cf5 = \cf6 boder\cf5 +\cf8 1\cf2 ; \cf6 i \cf5 <= \cf6 right\cf2 ; \cf5 ++\cf6 i\cf5 ) \{\
+            \cf6 sum2 \cf5 += \cf6 arr\cf5 [\cf6 i\cf5 ]\cf2 ;\
+            if \cf5 (\cf6 sum2 \cf5 > \cf6 max2\cf5 )\cf2 ;\
+            \cf6 max2 \cf5 = \cf6 sum2\cf2 ;\
+        \cf5 \}\
+\
+        \cf2 int \cf6 sum_cross \cf5 = \cf6 sum1 \cf5 + \cf6 sum2\cf2 ;\
+        int \cf6 maxtot \cf5 = \cf6 sum_cross\cf2 ;\
+        if \cf5 (\cf6 max_left \cf5 > \cf6 maxtot\cf5 )\
+            \cf6 maxtot \cf5 = \cf6 max_left\cf2 ;\
+        if \cf5 (\cf6 max_right \cf5 > \cf6 maxtot\cf5 )\
+            \cf6 maxtot \cf5 = \cf6 max_right\cf2 ;\
+        return \cf6 maxtot\cf2 ;\
+    \cf5 \}\
+\}\
+ \
+\
+I don\'92t know where is the mistake\'85\'85XD\'85.\
+Id better not waste time on it.\
+\
+\
+\cf2 int \cf4 maxf\cf5 (\cf2 int \cf5 *\cf6 arr\cf5 )\
+\{\
+    \cf2 int \cf6 maxsum\cf5 =\cf8 0\cf2 ;\
+    int \cf6 thissum\cf5 =\cf8 0\cf2 ;\
+    for \cf5 (\cf2 int \cf6 i \cf5 = \cf8 0\cf2 ; \cf6 i \cf5 <\cf6 num \cf2 ; \cf6 i\cf5 ++)\{\
+        \cf6 thissum \cf5 += \cf6 arr\cf5 [\cf6 i\cf5 ]\cf2 ;\
+        if\cf5 (\cf6 thissum\cf5 >\cf6 maxsum\cf5 )\
+            \cf6 maxsum\cf5 =\cf6 thissum\cf2 ;\
+        else if\cf5 (\cf6 thissum\cf5 <\cf8 0\cf5 )\
+            \cf6 thissum\cf5 =\cf8 0\cf2 ;\
+    \cf5 \}\
+    \cf2 return \cf6 maxsum\cf2 ;\
+\cf5 \}\
+This is a really smart algorithm	which discovered it does not influence the outcome when you find that the subsequence sum from arr[I] to arr[j] is negative, and jump it.}

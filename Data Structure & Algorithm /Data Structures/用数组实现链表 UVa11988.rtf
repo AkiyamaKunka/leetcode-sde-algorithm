@@ -1,0 +1,87 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fnil\fcharset134 PingFangSC-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red251\green24\blue39;\red251\green0\blue183;\red24\green150\blue255;
+\red83\green255\blue121;\red82\green72\blue255;\red16\green131\blue255;\red61\green255\blue240;\red250\green242\blue255;
+\red14\green110\blue109;}
+{\*\expandedcolortbl;;\csgenericrgb\c98431\c9412\c15294;\csgenericrgb\c98431\c0\c71765;\csgenericrgb\c9412\c58824\c100000;
+\csgenericrgb\c32549\c100000\c47451;\csgenericrgb\c32157\c28235\c100000;\csgenericrgb\c6275\c51373\c100000;\csgenericrgb\c23922\c100000\c94118;\csgenericrgb\c98039\c94902\c100000;
+\csgenericrgb\c5490\c43137\c42745;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21600\viewh17400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf1 \cb0 #include \cf2 <cstdio>\
+\cf1 #include \cf2 <cstring>\
+\cf1 #include \cf2 <iostream>\
+\cf1 #include \cf2 <algorithm>\
+\cf1 #include \cf2 <cmath>\
+\cf1 #include \cf2 <set>\
+\cf1 #include \cf2 <vector>\
+\cf1 #include \cf2 <utility>\
+\cf1 #include \cf2 <stack>\
+\cf1 #include \cf2 <queue>\
+\cf1 #include \cf2 <string>\
+\cf1 #include \cf2 <cctype>\
+\cf1 #include \cf2 <ctime>\
+\cf1 #include \cf2 <sstream>\
+\cf1 #include \cf2 <map>\
+\cf3 using namespace \cf4 std\cf1 ;\
+#define 
+\f1\b \cf5 LOCAL\
+
+\f0\b0 \cf3 const int \cf1 maxn =\cf6 1000000\cf1 ;\
+\
+\
+\cf3 int \cf7 main\cf1 () \{\
+#ifdef 
+\f1\b \cf5 LOCAL\
+    
+\f0\b0 \cf8 freopen\cf1 (\cf2 "/Users/robertwong/CLionProjects/untitled5/data_in.txt"\cf1 , \cf2 "r"\cf1 , 
+\f1\b \cf5 stdin
+\f0\b0 \cf1 );\
+#endif\
+        \cf3 int \cf1 last,cur,next1[maxn];\
+        \cf3 char \cf1 s[maxn];\
+        \cf3 while \cf1 (\cf8 scanf\cf1 (\cf2 "%s"\cf1 , s + \cf6 1\cf1 ) == \cf6 1\cf1 )\
+        \{\
+            \cf3 int \cf1 n = \cf8 strlen\cf1 (s + \cf6 1\cf1 );\
+            last = cur = \cf6 0\cf1 ;\
+            next1[\cf6 0\cf1 ] = \cf6 0\cf1 ;\
+            \cf3 for \cf1 (\cf3 int \cf1 i = \cf6 0\cf1 ; i <= n; ++i)\
+            \{\
+                \cf3 char \cf1 ch = s[i];\
+                \cf3 if \cf1 (ch == \cf2 '['\cf1 )cur = \cf6 0\cf1 ;\
+                \cf3 else if \cf1 (ch == \cf2 ']'\cf1 ) cur = last;\
+                \cf3 else\
+                \cf1 \{\
+                    next1[i] = next1[cur];\cf9 //
+\f2 \'d3\'c3\'d5\'e2\'d6\'d6\'b7\'bd\'b7\'a8\'ca\'b9\'b5\'c3
+\f0 link
+\f2 \'b4\'ab\'b5\'dd\'b9\'fd\'c0\'b4
+\f0 \
+                    \cf1 next1[cur] = i;\cf9 //
+\f2 \'c8\'c3
+\f0 next
+\f2 \'b4\'a2\'b4\'e6\'c9\'cf\'d4\'da
+\f0 cur
+\f2 \'ce\'bb\'d6\'c3\'b5\'c4\'d4\'aa\'cb\'d8\'c1\'ac\'bd\'d3\'b5\'c4\'cf\'c2\'d2\'bb\'b8\'f6\'d4\'aa\'cb\'d8
+\f0 \
+                    \cf3 if \cf1 (cur == last) last = i;\
+                    cur = i;\cf9 //
+\f2 \'c8\'c3
+\f0 cur
+\f2 \'d2\'c6\'b6\'af
+\f0 \
+                \cf1 \}\
+            \}\
+            \cf3 for \cf1 (\cf3 int \cf1 i = next1[\cf6 0\cf1 ]; i != \cf6 0\cf1 ; i = next1[i])\
+            \{\
+                \cf8 printf\cf1 (\cf2 "%c"\cf1 , s[i]);\
+            \}\
+            cout \cf10 << \cf8 endl\cf1 ;\
+        \}\
+    \}\
+\
+
+\f2 \'b8\'f6\'c8\'cb\'c8\'cf\'ce\'aa\'ca\'c7\'b7\'c7\'b3\'a3\'c4\'d1\'c0\'ed\'bd\'e2\'b5\'c4\'d2\'bb\'b5\'c0\'cc\'e2\'a1\'a3\
+\'ce\'d2\'bf\'c9\'d2\'d4\'bf\'b4\'b6\'ae\'d5\'e2\'b8\'f6\'b6\'ab\'ce\'f7\'ca\'c7\'d4\'f5\'c3\'b4\'ca\'b5\'cf\'d6\'b5\'c4\'a3\'ac\'b5\'ab\'ca\'c7\'d5\'e2\'b8\'f6\'b2\'d9\'d7\'f7\'d5\'e6\'b5\'c4\'ba\'dc\'c3\'d4\'a1\'ad\'a1\'ad}

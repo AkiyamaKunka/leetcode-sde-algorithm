@@ -1,0 +1,58 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2577
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;\red251\green0\blue183;\red105\green31\blue255;\red16\green131\blue255;
+\red82\green72\blue255;\red61\green255\blue240;\red158\green166\blue175;\red32\green32\blue32;}
+{\*\expandedcolortbl;;\csgenericrgb\c98431\c0\c71765;\csgenericrgb\c41176\c12157\c100000;\csgenericrgb\c6275\c51373\c100000;
+\csgenericrgb\c32157\c28235\c100000;\csgenericrgb\c23922\c100000\c94118;\csgenericrgb\c61961\c65098\c68627;\csgenericrgb\c12549\c12549\c12549;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww20880\viewh14600\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0  \page O(logN+2) 
+\f1 \'d5\'e2\'d1\'f9\'cb\'e3\'b7\'a8\'b5\'c4\'c2\'b3\'b0\'f4\'d0\'d4\'be\'cd\'c3\'bb\'d3\'d0\'ce\'ca\'cc\'e2\'c1\'cb\'a3\'ac\'b2\'bb\'bb\'e1\'b3\'f6\'b4\'ed\'b7\'c7\'b3\'a3\'ce\'c8\'a1\'ab\
+\
+\'ba\'cb\'d0\'c4\'cb\'bc\'cf\'eb\'be\'cd\'ca\'c7\'b9\'e6\'b6\'a8\'d2\'bb\'b8\'f6 pivot \'c8\'bb\'ba\'f3\'bf\'b4\'bf\'b4\'d7\'f3\'b1\'df \'d4\'d9\'cd\'f9\'d3\'d2\'b1\'df\'bf\'b4\'bf\'b4\
+\
+\'b2\'bb\'b9\'fd\'ca\'c7\'d5\'eb\'b6\'d4\'d2\'bb\'b8\'f6\'d2\'d1\'be\'ad\'c5\'c5\'d0\'f2\'b9\'fd\'b5\'c4 \'c0\'e0\'ca\'fd\'d7\'e9\'d3\'b4\'a1\'ab \
+\
+\'b2\'bb\'b9\'fdquick sort\'b5\'c4\'b4\'fa\'c2\'eb\'ca\'c7\'c3\'bb\'ce\'ca\'cc\'e2\'c1\'cb
+\f0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf2 \cb0 template \cf1 <\cf2 class \cf3 T\cf1 >\
+\cf2 int  \cf4 binary_search\cf1 (\cf3 T \cf1 *A,\cf2 const \cf3 T \cf1 & target,\cf2 int \cf1 head,\cf2 int \cf1 bottom)\{\
+    \cf2 int \cf1 mid = head + (head - bottom)/\cf5 2\cf1 ;\
+    \cf2 while\cf1 (head > bottom) \{\
+        \cf2 if \cf1 (target \cf6 == \cf1 A[mid]) \cf2 return \cf1 mid;\
+        \cf2 else if \cf1 (target \cf6 > \cf1 A[mid]) head = mid + \cf5 1\cf1 ;\
+        \cf2 else \cf1 bottom = mid - \cf5 1\cf1 ;\
+    \}\
+    \cf2 return \cf1 -\cf5 1\cf1 ;\
+\}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\fs48 \cf7 \cb8 \
+The array has been presorted , so won\'92t take that much time to do the searching .\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\fs24 \cf2 \cb0 void \cf4 quick_sort\cf1 (\cf2 int \cf1 *a, \cf2 int \cf1 start, \cf2 int \cf1 end)\{\
+    \cf2 if\cf1 (start >= end) \cf2 return\cf1 ;\
+    \cf2 int \cf1 left = start;\
+    \cf2 int \cf1 right = end;\
+    \cf2 int \cf1 pivot = a[(end + start) / \cf5 2\cf1 ];\
+    \cf2 while\cf1 (left<=right) \{\
+        \cf2 while \cf1 (left <= right && a[left] < pivot)\
+            left++;\
+        \cf2 while \cf1 (left <= right && a[right] > pivot)\
+            right--;\
+        \cf2 if \cf1 (left <= right) \{\
+            \cf6 swap\cf1 (a[left], a[right]);\
+            left++;\
+            right--;\
+        \}\
+    \}\
+    \cf6 quick_sort\cf1 (a,start,right);\
+    \cf6 quick_sort\cf1 (a,left,end);\
+\}\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf1 \
+}

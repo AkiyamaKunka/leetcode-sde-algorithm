@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\froman\fcharset0 Times-Roman;\f2\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red251\green0\blue183;\red21\green133\blue255;
+\red16\green131\blue255;\red61\green255\blue240;\red82\green72\blue255;\red14\green110\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c93333;\csgenericrgb\c98431\c0\c71765;\csgenericrgb\c8235\c52157\c100000;
+\csgenericrgb\c6275\c51373\c100000;\csgenericrgb\c23922\c100000\c94118;\csgenericrgb\c32157\c28235\c100000;\csgenericrgb\c5490\c43137\c42745;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21300\viewh17100\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 \'d7\'ee\'b3\'a4\'b5\'dd\'d4\'f6\'d7\'d6\'ca\'fd\'c1\'d0\'a3\'ac\'cc\'e2\'c4\'bf\'bf\'c9\'d2\'d4\'bf\'b4\'d5\'e2\'b8\'f6https://gblobscdn.gitbook.com/assets%2F-LrtQOWSnDdXhp3kYN4k%2F-M3U3aNXgGJVkKZ-TldN%2F-LrtQ_eB8xJ9fJkJCpTt%2Ftitle.png?generation=1585364260807044&alt=media\
+\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://leetcode-cn.com/problems/longest-increasing-subsequence/"}}{\fldrslt 
+\f1\fs24 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \outl0\strokewidth0 \strokec2 https://leetcode-cn.com/problems/longest-increasing-subsequence/}}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \'d5\'e2\'b5\'c0\'cc\'e2\'b5\'c4\'d6\'d8\'b5\'e3\'ca\'c7\'d0\'b4\'b3\'f6\'c0\'b4\'d7\'b4\'cc\'ac\'d7\'aa\'d2\'c6\'b7\'bd\'b3\'cc\'a1\'a3\'d2\'c0\'c8\'bb\'ca\'c7\'d2\'bb\'b5\'c0\'ca\'fd\'d1\'a7\'b9\'e9\'c4\'c9\'b7\'a8\'b5\'c4\'cc\'e2\'a1\'a3\
+\'c7\'f3\'b3\'f6\'c3\'bf\'d2\'bb\'b8\'f6\'ce\'bb\'d6\'c3\'b5\'c4\'d7\'ee\'b4\'f3\'d6\'b5\'a3\'ac\'c8\'bb\'ba\'f3\'c7\'f3\'b4\'a2\'b4\'e6\'b5\'c4dp\'ca\'fd\'c1\'d0\'d6\'d0\'b5\'c4\'d7\'ee\'b4\'f3\'d6\'b5\
+\'bf\'c9\'d2\'d4\'d6\'d8\'d7\'f6\'d2\'bb\'b1\'e9\'b5\'c4\
+\'ca\'b1\'bc\'e4\'b8\'b4\'d4\'d3\'b6\'c8N2\'b0\'c9\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf3 \cb0 class \cf4 Solution \cf1 \{\
+\cf3 public\cf1 :\
+    \cf3 int \cf5 lengthOfLIS\cf1 (\cf4 vector\cf1 <\cf3 int\cf1 >& nums) \{\
+    \cf4 vector\cf1 <\cf3 int\cf1 >a(nums.\cf6 size\cf1 (),\cf7 1\cf1 );\
+        \cf3 for \cf1 (\cf3 int \cf1 i = \cf7 0\cf1 ; i < nums.\cf6 size\cf1 (); i++)\
+            \cf3 for \cf1 (\cf3 int \cf1 j = \cf7 0\cf1 ; j < i; j++)\
+                \cf3 if\cf1 (nums\cf8 [\cf1 i\cf8 ]\cf1 >nums\cf8 [\cf1 j\cf8 ]\cf1 )\
+                    a\cf8 [\cf1 i\cf8 ]\cf1 =\cf6 max\cf1 (a\cf8 [\cf1 i\cf8 ]\cf1 ,a\cf8 [\cf1 j\cf8 ]\cf1 +\cf7 1\cf1 );\
+        \cf3 int \cf1 res = \cf7 0\cf1 ;\
+        \cf3 for \cf1 (\cf3 int \cf1 k = \cf7 0\cf1 ; k < a.\cf6 size\cf1 (); k++)\
+            res = \cf6 max\cf1 (res, a\cf8 [\cf1 k\cf8 ]\cf1 );\
+        \cf3 return \cf1 res;\
+    \}\
+\};\
+\
+}

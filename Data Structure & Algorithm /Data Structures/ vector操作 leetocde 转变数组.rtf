@@ -1,0 +1,52 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset0 HelveticaNeue-Medium;\f2\fnil\fcharset134 PingFangSC-Medium;
+\f3\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red51\green51\blue51;\red255\green255\blue255;
+\red0\green0\blue0;\red251\green0\blue183;\red21\green133\blue255;\red16\green131\blue255;\red61\green255\blue240;
+\red82\green72\blue255;\red14\green110\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c25882\c25882\c25882;\cssrgb\c100000\c100000\c100000;
+\cssrgb\c0\c0\c0\c85098;\csgenericrgb\c98431\c0\c71765;\csgenericrgb\c8235\c52157\c100000;\csgenericrgb\c6275\c51373\c100000;\csgenericrgb\c23922\c100000\c94118;
+\csgenericrgb\c32157\c28235\c100000;\csgenericrgb\c5490\c43137\c42745;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21600\viewh17400\viewkind0
+\deftab720
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f0\fs26 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \'d5\'e2\'b8\'f6\'cc\'e2\'b1\'c8\'bd\'cf\'bf\'d3\'b5\'c4\'b5\'d8\'b7\'bd\'be\'cd\'ca\'c7\'d7\'a2\'d2\'e2\'d2\'bb\'cf\'c2end\'a3\'a8\'a3\'a9\'ca\'c7vector\'d7\'ee\'c4\'a9\'ce\'b2\'d2\'bb\'b8\'f6\'d4\'aa\'cb\'d8\'b5\'c4\'b5\'fc\'b4\'fa\'c6\'f7\'d4\'d9+1\'a3\'bb\
+\
+\'d5\'e2\'b8\'f6\'bf\'d3\'c4\'e3\'d2\'d1\'be\'ad\'b2\'c8\'b9\'fd\'d2\'bb\'b2\'a8\'c1\'cb\'a3\'ac\'be\'cd\'b2\'bb\'d2\'aa\'d4\'d9\'b5\'f4\'bd\'f8\'c8\'a5\'c1\'cb\'b0\'c8\
+\
+\
+\pard\pardeftab720\sl320\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://leetcode-cn.com/problems/sum-of-mutated-array-closest-to-target/"}}{\fldrslt 
+\f1\fs28 \cf3 \cb4 \strokec3 1300. 
+\f2 \'d7\'aa\'b1\'e4\'ca\'fd\'d7\'e9\'ba\'f3\'d7\'ee\'bd\'d3\'bd\'fc\'c4\'bf\'b1\'ea\'d6\'b5\'b5\'c4\'ca\'fd\'d7\'e9\'ba\'cd}}
+\f1\fs28 \cf5 \cb4 \strokec5 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf6 \cb0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 class \cf7 Solutionfdsa\cf1 \{\
+\cf6 public\cf1 :\
+    \cf6 int \cf8 findBestValue\cf1 (\cf7 vector\cf1 <\cf6 int\cf1 >& arr, \cf6 int \cf1 target) \{\
+        \cf9 sort\cf1 (arr.\cf9 begin\cf1 (), arr.\cf9 end\cf1 ());\
+        \cf6 int \cf1 n = arr.\cf9 size\cf1 ();\
+        \cf7 vector\cf1 <\cf6 int\cf1 > prefix(n + \cf10 1\cf1 );\
+        \cf6 for \cf1 (\cf6 int \cf1 i = \cf10 1\cf1 ; i <= n; ++i) \{\
+            prefix\cf11 [\cf1 i\cf11 ] \cf1 = prefix\cf11 [\cf1 i - \cf10 1\cf11 ] \cf1 + arr\cf11 [\cf1 i - \cf10 1\cf11 ]\cf1 ;\
+        \}\
+\
+        \cf6 int \cf1 r = \cf11 *\cf9 max_element\cf1 (arr.\cf9 begin\cf1 (), arr.\cf9 end\cf1 ());\
+        \cf6 int \cf1 ans = \cf10 0\cf1 , diff = target;\
+        \cf6 for \cf1 (\cf6 int \cf1 i = \cf10 1\cf1 ; i <= r; ++i) \{\
+            \cf6 auto \cf1 iter = \cf9 lower_bound\cf1 (arr.\cf9 begin\cf1 (), arr.\cf9 end\cf1 (), i);\
+            \cf6 int \cf1 cur = prefix\cf11 [\cf1 iter \cf11 - \cf1 arr.\cf9 begin\cf1 ()\cf11 ] \cf1 + (arr.\cf9 end\cf1 () \cf11 - \cf1 iter) * i;\
+            \cf6 if \cf1 (\cf9 abs\cf1 (cur - target) < diff) \{\
+                ans = i;\
+                diff = \cf9 abs\cf1 (cur - target);\
+            \}\
+        \}\
+        \cf6 return \cf1 ans;\
+    \}\
+\};\
+\
+}

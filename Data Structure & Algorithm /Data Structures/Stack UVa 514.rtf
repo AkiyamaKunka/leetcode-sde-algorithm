@@ -1,0 +1,74 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fnil\fcharset134 PingFangSC-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red251\green24\blue39;\red251\green0\blue183;\red24\green150\blue255;
+\red83\green255\blue121;\red16\green131\blue255;\red61\green255\blue240;\red250\green242\blue255;\red14\green110\blue109;
+\red82\green72\blue255;\red21\green133\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c98431\c9412\c15294;\csgenericrgb\c98431\c0\c71765;\csgenericrgb\c9412\c58824\c100000;
+\csgenericrgb\c32549\c100000\c47451;\csgenericrgb\c6275\c51373\c100000;\csgenericrgb\c23922\c100000\c94118;\csgenericrgb\c98039\c94902\c100000;\csgenericrgb\c5490\c43137\c42745;
+\csgenericrgb\c32157\c28235\c100000;\csgenericrgb\c8235\c52157\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21600\viewh17400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf1 \cb0 #include \cf2 <cstdio>\
+\cf1 #include \cf2 <cstring>\
+\cf1 #include \cf2 <iostream>\
+\cf1 #include \cf2 <algorithm>\
+\cf1 #include \cf2 <cmath>\
+\cf1 #include \cf2 <set>\
+\cf1 #include \cf2 <vector>\
+\cf1 #include \cf2 <utility>\
+\cf1 #include \cf2 <stack>\
+\cf1 #include \cf2 <queue>\
+\cf1 #include \cf2 <string>\
+\cf1 #include \cf2 <cctype>\
+\cf1 #include \cf2 <ctime>\
+\cf1 #include \cf2 <sstream>\
+\cf1 #include \cf2 <map>\
+\cf3 using namespace \cf4 std\cf1 ;\
+#define 
+\f1\b \cf5 LOCAL\
+\
+\
+\
+\
+
+\f0\b0 \cf3 int \cf6 main\cf1 () \{\
+#ifdef 
+\f1\b \cf5 LOCAL\
+    
+\f0\b0 \cf7 freopen\cf1 (\cf2 "/Users/robertwong/CLionProjects/untitled5/data_in.txt"\cf1 , \cf2 "r"\cf1 , 
+\f1\b \cf5 stdin
+\f0\b0 \cf1 );\
+    \cf8 //freopen("/Users/robertwong/CLionProjects/untitled5/data_out.txt","w",stdout);\
+\cf1 #endif\
+    \cf3 int \cf1 num;\
+    cin\cf9 >>\cf1 num;\
+    \cf3 int \cf1 out[num];\
+    \cf3 for \cf1 (\cf3 int \cf1 i = \cf10 0\cf1 ; i < num; i++)\
+        cin\cf9 >>\cf1 out[num];\
+    \cf11 stack\cf1 <\cf3 int\cf1 >in;\
+    \cf3 int \cf1 a=\cf10 1\cf1 ;\
+    \cf3 int \cf1 b=\cf10 1\cf1 ;\
+    \cf3 bool \cf1 ok = \cf3 true\cf1 ;\
+    \cf3 while\cf1 (b<=num)\{\
+        \cf3 if\cf1 (a=out[b])\{a++;b++;\}\
+        \cf3 else if\cf1 (!in.\cf7 empty\cf1 () && in.\cf7 top\cf1 ()==out[b])\{\
+            in.\cf7 pop\cf1 ();\
+            b++;\
+        \}\
+        \cf3 else if\cf1 (a<num)\{\
+            in.\cf7 push\cf1 (a++);\
+        \}\
+        \cf3 else \cf1 ok= !ok;\
+    \}\
+    \
+    cout\cf9 <<\cf1 (ok? \cf2 "yes"\cf1 :\cf2 "no"\cf1 );\
+    \cf3 return \cf10 0\cf1 ;\
+\}\
+//
+\f2 \'d5\'e2\'b5\'c0\'cc\'e2\'b5\'c4\'b9\'d8\'bc\'fc\'d4\'da\'d3\'da
+\f0 stack
+\f2 \'b5\'c4\'ca\'b9\'d3\'c3
+\f0  
+\f2 \'b7\'c7\'b3\'a3\'c7\'c9\'c3\'ee\'a3\'ac\'d4\'da\'c1\'bd\'b8\'f6\'ca\'fd\'cf\'e0\'b5\'c8\'b5\'c4\'ca\'b1\'ba\'f2\'b4\'a6\'c0\'ed\'b7\'c7\'b3\'a3\'ce\'a2\'c3\'ee\'a3\'ac\'bd\'a8\'d2\'e9\'d6\'d8\'b8\'b4\'d7\'f6\'d2\'bb\'b1\'e9}

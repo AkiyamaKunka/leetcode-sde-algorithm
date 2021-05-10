@@ -1,0 +1,90 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fnil\fcharset0 HelveticaNeue-Medium;
+\f3\fnil\fcharset134 PingFangSC-Medium;\f4\fnil\fcharset0 Menlo-Regular;\f5\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red51\green51\blue51;\red255\green255\blue255;\red0\green0\blue0;
+\red0\green0\blue255;\red255\green255\blue254;\red0\green0\blue0;\red19\green120\blue72;\red0\green0\blue233;
+}
+{\*\expandedcolortbl;;\cssrgb\c25882\c25882\c25882;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0\c85098;
+\cssrgb\c0\c0\c100000;\cssrgb\c100000\c100000\c99608;\cssrgb\c0\c0\c0;\cssrgb\c3529\c53333\c35294;\cssrgb\c0\c0\c93333;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh19580\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs48 \cf0 Floyd 
+\f1 \'c5\'d0\'c8\'a6\'cb\'e3\'b7\'a8\
+\
+\pard\pardeftab720\sl320\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://leetcode-cn.com/problems/find-the-duplicate-number/"}}{\fldrslt 
+\f2\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+287. 
+\f3 \'d1\'b0\'d5\'d2\'d6\'d8\'b8\'b4\'ca\'fd}}
+\f2\fs28 \cf4 \cb3 \expnd0\expndtw0\kerning0
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs48 \cf0 \cb1 \kerning1\expnd0\expndtw0 leetcode \
+\
+\'ca\'b9\'d3\'c3\'c1\'bd\'b8\'f6\'d6\'b8\'d5\'eb\'a3\'ac\'d2\'bb\'b8\'f6\'cb\'d9\'b6\'c8\'ce\'aa1 \'c1\'ed\'d2\'bb\'b8\'f6\'cb\'d9\'b6\'c8\'ce\'aa2 \'b1\'e9\'c0\'fa\'d3\'d0\'bb\'b7\'cd\'bc\
+\
+\'b5\'da\'d2\'bb\'b4\'ce\'cf\'e0\'d3\'f6 \
+\'c9\'e8\'c2\'b7\'b3\'cc\'d2\'bb\'b8\'f6\'ca\'c7S \'d2\'bb\'b8\'f6\'ca\'c72S \
+m\'ce\'aa\'b7\'c7\'bb\'b7\'b3\'a4\'b6\'c8\
+k\'ce\'aa\'b4\'d3\'bb\'b7\'b5\'c4\'c6\'f0\'b5\'e3\'b5\'bd\'cf\'e0\'d3\'f6\'b5\'e3\'b5\'c4\'be\'e0\'c0\'eb\
+r\'ca\'c7\'bb\'b7\'b3\'a4\
+\
+S = m + n1 * r + k \
+2S = m + n2 * r + k\
+\
+\'bd\'abslow \'d6\'b8\'d5\'eb\'b7\'c5\'b5\'bd\'cd\'bc\'b5\'c4\'c6\'f0\'b5\'e3\'a3\'a8\'b7\'c7\'bb\'b7\'b2\'bf\'b7\'d6\'a3\'a9\
+\'b5\'f7\'d5\'fbfast\'b5\'c4\'cb\'d9\'b6\'c8\'d2\'b2\'ce\'aa1 \
+\
+S\'ce\'aar\'b5\'c4\'b1\'b6\'ca\'fd\
+\
+\'d4\'d9\'b4\'ce\'d4\'cb\'d0\'d0\'a3\'ac\'cf\'e0\'d3\'f6\'b4\'a6\'d3\'d0 \'b6\'fe\'d5\'df\'be\'f9\'d4\'da\'bb\'b7\'b5\'c4\'c6\'f0\'ca\'bc\'b5\'e3\
+\
+fast \'d7\'dc\'c2\'b7\'b3\'cc = m+ 2S\
+\'bf\'c9\'d2\'d4\'c0\'ed\'bd\'e2\'ce\'aa \'cf\'c8\'d7\'df\'c1\'cb\'b7\'c7\'bb\'b7\'b2\'bf\'b7\'d6\'b3\'a4\'b6\'c8 \'d4\'da\'d7\'df\'c1\'cbn3\'b8\'f6\'bb\'b7\'b3\'a4\
+\
+\'d5\'e2\'b8\'f6\'cb\'e3\'b7\'a8\'b5\'c4\'ca\'fd\'d1\'a7\'be\'ab\'bb\'aa\'d4\'da\'d3\'da\
+1.\'cb\'d9\'b6\'c8\'b2\'bb\'cd\'ac \'c8\'c6\'bb\'b7\'cf\'e0\'d3\'f6 \'c2\'b7\'b3\'cc\'b1\'d8\'ce\'aa\'bb\'b7\'b5\'c4\'b1\'b6\'ca\'fd\
+2. \'c2\'fd\'d6\'b8\'d5\'ebslow\'d4\'da\'b2\'bd\'d6\'e82\'d6\'d0\'d7\'f6\'c1\'cb\'d2\'bb\'b8\'f6\'bc\'c7\'b3\'cc\'c6\'f7\'b5\'c4\'d7\'f7\'d3\'c3 \'c4\'bf\'b5\'c4\'be\'cd\'ca\'c7\'bc\'c7\'cf\'c2\'c0\'b4m\'b5\'c4\'b3\'a4\'b6\'c8 \'d5\'e2\'ca\'b1\'ba\'f2fast\'d5\'fd\'ba\'c3\'c2\'fa\'d7\'e3m+2S\'b5\'c4\'c2\'b7\'b3\'cc \'bf\'c9\'d2\'d4\'bd\'f8\'d0\'d0\'b8\'c5\'c4\'ee\'d7\'aa\'bb\'af\
+\
+\'ca\'b1\'bc\'e4\'b8\'b4\'d4\'d3\'b6\'c8O(n)\
+\'bf\'d5\'bc\'e4\'b8\'b4\'d4\'d3\'b6\'c8O(1)\
+\
+\'b8\'bd\'d4\'f9\'b7\'c7\'b3\'a3\'bc\'f2\'bd\'e0\'b5\'c4leetcode\'b4\'fa\'c2\'eb\
+\pard\pardeftab720\sl400\partightenfactor0
+
+\f4\fs26 \cf5 \cb6 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec5 class\cf7 \strokec7 \'a0Solution\'a0\{\cb1 \
+\cf5 \cb6 \strokec5 public\cf7 \strokec7 :\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\cf5 \strokec5 int\cf7 \strokec7 \'a0findDuplicate(vector<\cf5 \strokec5 int\cf7 \strokec7 >&\'a0nums)\'a0\{\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 int\cf7 \strokec7 \'a0fast,\'a0slow;\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0fast\'a0=\'a0slow\'a0=\'a0\cf8 \strokec8 0\cf7 \strokec7 ;\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 do\cf7 \strokec7 \{\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0slow\'a0=\'a0nums[slow];\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0fast\'a0=\'a0nums[nums[fast]];\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\cf5 \strokec5 while\cf7 \strokec7 (slow\'a0!=\'a0fast);\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0slow\'a0=\'a0\cf8 \strokec8 0\cf7 \strokec7 ;\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 while\cf7 \strokec7 (slow\'a0!=\'a0fast)\{\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0slow\'a0=\'a0nums[slow];\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0fast\'a0=\'a0nums[fast];\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\}\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\'a0\'a0\'a0\'a0\cf5 \strokec5 return\cf7 \strokec7 \'a0fast;\cb1 \
+\cb6 \'a0\'a0\'a0\'a0\}\cb1 \
+\cb6 \};\cb1 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs48 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+\'bc\'bc\'ca\'f5\'bd\'b2\'bd\'e2\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://blog.csdn.net/u012534831/article/details/74231581"}}{\fldrslt 
+\f5\fs24 \cf9 \expnd0\expndtw0\kerning0
+\ul \ulc9 https://blog.csdn.net/u012534831/article/details/74231581}}
+\f5\fs24 \cf9 \expnd0\expndtw0\kerning0
+\ul \ulc9  \
+\
+\
+}

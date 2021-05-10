@@ -1,0 +1,18 @@
+void qsort(int *a,int left,int right)
+{
+    if(left>=right) return;
+    int l=left,r=right,mid=(left+right)/2;
+    while(l<r)
+    {
+        while(l<mid&&a[l]<=a[mid]) l++;
+        swap(a[l],a[mid]);
+        mid=l;
+        while(r>mid&&a[r]>=a[mid]) r--;
+        swap(a[r],a[mid]);
+        mid=r;
+    }
+    qsort(a,left,mid-1);
+    qsort(a,mid+1,right);
+}
+
+//这里每次递归都追踪的是a[mid]的值，l和r向mid靠拢，出现反序就进行一次交换，最终结果是a[mid]左边值比其小右边值比其大，然后对左右分别递归

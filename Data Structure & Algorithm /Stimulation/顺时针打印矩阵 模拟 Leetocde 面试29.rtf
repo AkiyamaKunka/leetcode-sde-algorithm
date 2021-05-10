@@ -1,0 +1,71 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset134 PingFangSC-Medium;\f1\fnil\fcharset0 HelveticaNeue-Medium;\f2\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red51\green51\blue51;\red255\green255\blue255;\red0\green0\blue0;
+\red251\green0\blue183;\red21\green133\blue255;\red82\green0\blue103;\red82\green72\blue255;\red16\green131\blue255;
+\red61\green255\blue240;\red14\green110\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c25882\c25882\c25882;\cssrgb\c100000\c100000\c100000;\cssrgb\c0\c0\c0\c85098;
+\csgenericrgb\c98431\c0\c71765;\csgenericrgb\c8235\c52157\c100000;\csgenericrgb\c32157\c0\c40392;\csgenericrgb\c32157\c28235\c100000;\csgenericrgb\c6275\c51373\c100000;
+\csgenericrgb\c23922\c100000\c94118;\csgenericrgb\c5490\c43137\c42745;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21600\viewh17400\viewkind0
+\deftab720
+\pard\pardeftab720\sl320\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/"}}{\fldrslt 
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \'c3\'e6\'ca\'d4\'cc\'e2
+\f1 29. 
+\f0 \'cb\'b3\'ca\'b1\'d5\'eb\'b4\'f2\'d3\'a1\'be\'d8\'d5\'f3}}
+\f0\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\'c4\'a3\'c4\'e2\'cc\'e2 \'c3\'bb\'ca\'b2\'c3\'b4\'ba\'c3\'cb\'b5\'b5\'c4 \
+\'be\'cd\'ca\'c7\'d7\'a2\'d2\'e2\'d0\'fd\'d7\'aa\'b7\'bd\'cf\'f2
+\f1 \cf4 \strokec4 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs24 \cf5 \cb0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 class \cf6 Solution \cf1 \{\
+    \cf5 int \cf7 dy \cf1 [\cf8 4\cf1 ] = \{\cf8 1\cf1 , \cf8 0\cf1 , -\cf8 1\cf1 , \cf8 0\cf1 \};\
+    \cf5 int \cf7 dx \cf1 [\cf8 4\cf1 ] = \{\cf8 0\cf1 , \cf8 1\cf1 , \cf8 0\cf1 , -\cf8 1\cf1 \};\
+\cf5 public\cf1 :\
+    \cf6 vector\cf1 <\cf5 int\cf1 > \cf9 spiralOrder\cf1 (\cf6 vector\cf1 <\cf6 vector\cf1 <\cf5 int\cf1 >>& matrix) \{\
+        \cf6 vector\cf1 <\cf5 int\cf1 > ans;\
+        \cf5 if\cf1 (matrix.\cf10 empty\cf1 ())\
+            \cf5 return \cf1 ans;\
+        \cf5 int \cf1 sizey = matrix\cf11 [\cf8 0\cf11 ]\cf1 .\cf10 size\cf1 ();\
+        \cf5 int \cf1 sizex = matrix.\cf10 size\cf1 ();\
+        \cf5 int \cf1 x, y;\
+        x = y = \cf8 0\cf1 ;\
+        \cf5 int \cf1 cnt = \cf8 0\cf1 ;\
+        \cf5 while\cf1 (ans.\cf10 size\cf1 () != matrix.\cf10 size\cf1 ()*matrix\cf11 [\cf8 0\cf11 ]\cf1 .\cf10 size\cf1 ())\{\
+            \cf5 if\cf1 ( cnt != \cf8 0\cf1 ) \{\
+                \cf5 for \cf1 (\cf5 int \cf1 j = sizex; j > \cf8 0\cf1 ; j--) \{\
+                    ans.\cf10 push_back\cf1 (matrix\cf11 [\cf1 x\cf11 ][\cf1 y\cf11 ]\cf1 );\
+                    \cf5 if\cf1 (j == \cf8 1 \cf1 )\
+                        cnt++;\
+                    x += \cf7 dx\cf1 [cnt%\cf8 4\cf1 ];\
+                    y += \cf7 dy\cf1 [cnt%\cf8 4\cf1 ];\
+                \}\
+                \cf5 for \cf1 (\cf5 int \cf1 j = sizey; j > \cf8 0\cf1 ; j--) \{\
+                    ans.\cf10 push_back\cf1 (matrix\cf11 [\cf1 x\cf11 ][\cf1 y\cf11 ]\cf1 );\
+                    \cf5 if\cf1 (j == \cf8 1 \cf1 )\
+                        cnt++;\
+                    x += \cf7 dx\cf1 [cnt%\cf8 4\cf1 ];\
+                    y += \cf7 dy\cf1 [cnt%\cf8 4\cf1 ];\
+                \}\
+            \} \cf5 else\cf1 \{\
+                \cf5 for \cf1 (\cf5 int \cf1 j = sizey; j > \cf8 0\cf1 ; j--) \{\
+                    ans.\cf10 push_back\cf1 (matrix\cf11 [\cf1 x\cf11 ][\cf1 y\cf11 ]\cf1 );\
+                    \cf5 if\cf1 (j == \cf8 1 \cf1 )\
+                        cnt++;\
+                    x += \cf7 dx\cf1 [cnt%\cf8 4\cf1 ];\
+                    y += \cf7 dy\cf1 [cnt%\cf8 4\cf1 ];\
+                \}\
+            \}\
+            sizex += -\cf8 1\cf1 ;\
+            sizey += -\cf8 1\cf1 ;\
+        \}\
+        \cf5 return \cf1 ans;\
+    \}\
+\};\
+\
+}

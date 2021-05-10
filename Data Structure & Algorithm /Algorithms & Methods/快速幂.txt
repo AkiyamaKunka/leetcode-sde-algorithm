@@ -1,0 +1,11 @@
+//求b^q(mod k)的值
+
+long long pow(long long b, long long q, long long k)
+{
+    if(k == 1) return 0;
+    if(q == 0) return 1;
+    long long t = pow(b, q/2, k);
+    long long ans = t * t % k;
+    if(q%2 == 1) ans = ans * b % k;
+    return ans;
+}

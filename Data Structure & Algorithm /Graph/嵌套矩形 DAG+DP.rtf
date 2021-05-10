@@ -1,0 +1,275 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Monaco;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fswiss\fcharset0 Helvetica;
+\f3\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;\red135\green135\blue135;\red34\green34\blue34;\red193\green193\blue193;
+\red245\green186\blue68;\red191\green131\blue194;\red109\green188\blue135;\red88\green196\blue193;\red234\green121\blue57;
+\red251\green24\blue39;\red251\green0\blue183;\red24\green150\blue255;\red83\green255\blue121;\red82\green72\blue255;
+\red16\green131\blue255;\red14\green110\blue109;\red61\green255\blue240;}
+{\*\expandedcolortbl;;\cssrgb\c60000\c60000\c60000;\cssrgb\c17647\c17647\c17647;\cssrgb\c80000\c80000\c80000;
+\cssrgb\c97255\c77255\c33333;\cssrgb\c80000\c60000\c80392;\cssrgb\c49412\c77647\c60000;\cssrgb\c40392\c80392\c80000;\cssrgb\c94118\c55294\c28627;
+\csgenericrgb\c98431\c9412\c15294;\csgenericrgb\c98431\c0\c71765;\csgenericrgb\c9412\c58824\c100000;\csgenericrgb\c32549\c100000\c47451;\csgenericrgb\c32157\c28235\c100000;
+\csgenericrgb\c6275\c51373\c100000;\csgenericrgb\c5490\c43137\c42745;\csgenericrgb\c23922\c100000\c94118;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww21600\viewh17400\viewkind0
+\deftab720
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+// 
+\f1 \'cb\'bc\'c2\'b7\'a3\'ba\'cf\'c8\'b6\'d4\'b3\'a4\'ba\'cd\'bf\'ed\'c0\'b4\'b4\'cb\'c5\'c5\'d0\'f2\'a3\'ac\'d4\'d9\'b0\'b4\'d5\'d5\'d2\'aa\'c7\'f3\'b9\'b9\'cd\'bc\'a3\'ac
+\f0     \cf4 \
+\cf2 // 
+\f1 \'cd\'ea\'b3\'c9\'d6\'ae\'ba\'f3\'a3\'ac\'d6\'b1\'bd\'d3\'bc\'c7\'d2\'e4\'bb\'af\'cb\'d1\'cb\'f7\'a3\'ac\'d6\'b5\'b5\'c3\'d7\'a2\'d2\'e2\'b5\'c4\'b5\'d8\'b7\'bd\'ca\'c7\'c4\'e3\'b2\'bb\'c4\'dc\'d6\'bb\'b4\'d3\'b5\'da\'d2\'bb\'b8\'f6\'b5\'e3\'cb\'d1\'cb\'f7\'a3\'ac\'b6\'f8\'ca\'c7\'d2\'aa\'b4\'d3\'c3\'bf\'b8\'f6\'b5\'e3\'cb\'d1\'cb\'f7
+\f0     \cf4 \
+    \
+\cf2 /* DAG
+\f1 \'c9\'cf\'b5\'c4\'b6\'af\'cc\'ac\'b9\'e6\'bb\'ae\'d6\'ae\'c7\'b6\'cc\'d7\'be\'d8\'d0\'ce
+\f0  */\cf4 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf5 #\cf6 include\cf5  \cf7 <cstdio>\cf4 \
+\cf5 #\cf6 include\cf5  \cf7 <cstring>\cf4 \
+\
+\cf6 const\cf4  \cf6 int\cf4  maxn \cf8 =\cf4  \cf9 1005\cf4 ;\
+\cf6 int\cf4  n, G[maxn][maxn];\
+\cf6 int\cf4  a[maxn], b[maxn];\
+\cf6 int\cf4  dp[maxn];\
+\
+\cf6 void\cf4  \cf9 swap\cf4 (\cf6 int\cf4  \cf8 &\cf4 x, \cf6 int\cf4  \cf8 &\cf4 y)\{\
+    x \cf8 ^=\cf4  y;\
+    y \cf8 ^=\cf4  x;\
+    x \cf8 ^=\cf4  y;\
+\}\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 //
+\f1 \'bd\'ab
+\f0 x
+\f1 \'ba\'cd
+\f0 y
+\f1 \'b5\'c4\'d7\'ee\'b4\'f3\'d6\'b5\'b4\'e6\'d4\'da
+\f0 x
+\f1 \'d6\'d0
+\f0 \cf4 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf6 inline\cf4  \cf6 void\cf4  \cf9 CMAX\cf4 (\cf6 int\cf8 &\cf4  x, \cf6 int\cf4  y)\{\
+    \cf6 if\cf4  (y \cf8 >\cf4  x)\{\
+        x \cf8 =\cf4  y;\
+    \}\
+\}\
+\
+\pard\pardeftab720\sl360\partightenfactor0
+\cf2 /* 
+\f1 \'b2\'c9\'d3\'c3\'bc\'c7\'d2\'e4\'bb\'af\'cb\'d1\'cb\'f7
+\f0  
+\f1 \'c7\'f3\'b4\'d3
+\f0 s
+\f1 \'c4\'dc\'b5\'bd\'b4\'ef\'b5\'c4\'d7\'ee\'b3\'a4\'c2\'b7\'be\'b6
+\f0  */\cf4 \
+\pard\pardeftab720\sl360\partightenfactor0
+\cf6 int\cf4  \cf9 DP\cf4 (\cf6 int\cf4  s)\{\
+    \cf6 int\cf8 &\cf4  ans \cf8 =\cf4  dp[s];\
+    \cf6 if\cf4  (ans \cf8 >\cf4  \cf9 0\cf4 )\
+        \cf2 //
+\f1 \'bc\'c7\'d2\'e4\'bb\'af\'cb\'d1\'cb\'f7
+\f0 ,
+\f1 \'b1\'dc\'c3\'e2\'d6\'d8\'b8\'b4\'bc\'c6\'cb\'e3
+\f0 \cf4 \
+        \cf6 return\cf4  ans;\
+    ans \cf8 =\cf4  \cf9 1\cf4 ;\
+    \cf6 for\cf4  (\cf6 int\cf4  j \cf8 =\cf4  \cf9 1\cf4 ; j \cf8 <=\cf4  n; \cf8 ++\cf4 j)\{\
+        \cf6 if\cf4  (G[s][j])\{\
+            \cf2 //sj
+\f1 \'d3\'d0\'b1\'df
+\f0  
+\f1 \'c0\'fb\'d3\'c3\'d7\'d3\'ce\'ca\'cc\'e2
+\f0 dp[j]+1
+\f1 \'b8\'fc\'d0\'c2\'d7\'ee\'b4\'f3\'d6\'b5
+\f0 \cf4 \
+            \cf9 CMAX\cf4 (ans, \cf9 DP\cf4 (j) \cf8 +\cf4  \cf9 1\cf4 );\
+        \}\
+    \}\
+    \cf6 return\cf4  ans;\
+\}\
+\
+\cf6 void\cf4  \cf9 print_ans\cf4 (\cf6 int\cf4  i)\{\
+    \cf9 printf\cf4 (\cf7 "%d "\cf4 , i);\
+    \cf6 for\cf4  (\cf6 int\cf4  j \cf8 =\cf4  \cf9 1\cf4 ; j \cf8 <=\cf4  n; \cf8 ++\cf4 j)\{\
+        \cf6 if\cf4  (G[i][j] \cf8 &&\cf4  dp[j] \cf8 +\cf4  \cf9 1\cf4  \cf8 ==\cf4  dp[i])\{\
+            \cf9 print_ans\cf4 (j);\
+            \cf6 break\cf4 ;\
+        \}\
+    \}\cf2 //for(j)\cf4 \
+\}\
+\
+\cf6 int\cf4  \cf9 main\cf4 ()\
+\{\
+\cf5 #\cf6 ifdef\cf5  _LOCAL\cf4 \
+    \cf9 freopen\cf4 (\cf7 "D:\\\\input.txt"\cf4 , \cf7 "r"\cf4 , \cf5 stdin\cf4 );\
+\cf5 #\cf6 endif\cf4 \
+    \cf6 while\cf4  (\cf9 scanf\cf4 (\cf7 "%d"\cf4 , \cf8 &\cf4 n) \cf8 ==\cf4  \cf9 1\cf4 )\{\
+        \cf2 //n
+\f1 \'b8\'f6\'be\'d8\'d0\'ce
+\f0 \cf4 \
+        \cf6 for\cf4  (\cf6 int\cf4  i \cf8 =\cf4  \cf9 1\cf4 ; i \cf8 <=\cf4  n; \cf8 ++\cf4 i)\{\
+            \cf2 //
+\f1 \'c4\'ac\'c8\'cf
+\f0 a
+\f1 \'b4\'e6\'b3\'a4
+\f0 ,b
+\f1 \'b4\'e6\'bf\'ed
+\f0 (a > b)\cf4 \
+            \cf9 scanf\cf4 (\cf7 "%d%d"\cf4 , a \cf8 +\cf4  i, b \cf8 +\cf4  i);\
+            \cf6 if\cf4  (a[i] \cf8 <\cf4  b[i])\{\
+                \cf9 swap\cf4 (a[i], b[i]);\
+            \}\
+        \}\
+        \cf2 /*\
+            
+\f1 \'bd\'a8\'cd\'bc
+\f0  G[i][j]
+\f1 \'ce\'aa
+\f0 1
+\f1 \'b1\'ed\'ca\'be\'be\'d8\'d0\'ce
+\f0 i
+\f1 \'bf\'c9\'d2\'d4\'c7\'b6\'cc\'d7\'d4\'da\'be\'d8\'d0\'ce
+\f0 j
+\f1 \'d6\'d0
+\f0 \
+            
+\f1 \'c4\'c7\'c3\'b4\'d4\'ad\'ce\'ca\'cc\'e2\'b1\'e3\'d7\'aa\'bb\'af\'ce\'aa\'c7\'f3
+\f0 DAG
+\f1 \'c9\'cf\'b5\'c4\'d7\'ee\'b3\'a4\'c2\'b7\'be\'b6
+\f0 \
+            \
+            
+\f1 \'b6\'a8\'d2\'e5\'d7\'b4\'cc\'ac
+\f0 dp[i]
+\f1 \'b1\'ed\'ca\'be\'b4\'d3\'bd\'e1\'b5\'e3
+\f0 i
+\f1 \'b3\'f6\'b7\'a2\'bf\'c9\'d2\'d4\'b5\'bd\'b4\'ef\'b5\'c4\'d7\'ee\'b3\'a4\'c2\'b7\'be\'b6
+\f0 \
+            
+\f1 \'d4\'f2
+\f0  dp[i] = max(dp[j] + 1), 
+\f1 \'c6\'e4\'d6\'d0
+\f0  G[i][j]=1
+\f1 \'a3\'ac
+\f0 \
+        */\cf4 \
+        \cf9 memset\cf4 (G, \cf9 0\cf4 , \cf6 sizeof\cf4  G);\
+        \cf6 for\cf4  (\cf6 int\cf4  i \cf8 =\cf4  \cf9 1\cf4 ; i \cf8 <=\cf4  n; \cf8 ++\cf4 i)\{\
+            \cf6 for\cf4  (\cf6 int\cf4  j \cf8 =\cf4  \cf9 1\cf4 ; j \cf8 <=\cf4  n; \cf8 ++\cf4 j)\{\
+                \cf2 //
+\f1 \'be\'d8\'d0\'ce
+\f0 i
+\f1 \'b5\'c4\'b3\'a4\'ba\'cd\'bf\'ed\'b6\'bc\'d0\'a1\'d3\'da\'be\'d8\'d0\'ce
+\f0 j
+\f1 \'b5\'c4\'b3\'a4\'ba\'cd\'bf\'ed
+\f0 \cf4 \
+                \cf6 if\cf4  (a[i] \cf8 <\cf4  a[j] \cf8 &&\cf4  b[i] \cf8 <\cf4  b[j])\{\
+                    G[i][j] \cf8 =\cf4  \cf9 1\cf4 ; \cf2 //
+\f1 \'bf\'c9\'d2\'d4\'c7\'b6\'cc\'d7
+\f0 ,
+\f1 \'d4\'f2\'d3\'d0\'b1\'df
+\f0 \cf4 \
+                \}\
+            \}\
+        \}\cf2 //for(i)\cf4 \
+        \cf9 memset\cf4 (dp, \cf9 0\cf4 , \cf6 sizeof\cf4  dp);\
+        \cf6 int\cf4  ans \cf8 =\cf4  \cf9 0\cf4 ;\
+        \cf6 int\cf4  best;\
+        \cf6 for\cf4  (\cf6 int\cf4  i \cf8 =\cf4  \cf9 1\cf4 ; i \cf8 <=\cf4  n; \cf8 ++\cf4 i)\{\
+            \cf6 if\cf4  (\cf9 DP\cf4 (i) \cf8 >\cf4  ans)\{\
+                ans \cf8 =\cf4  dp[i];\
+                best \cf8 =\cf4  i;\
+            \}\
+        \}\cf2 //for(i)\cf4 \
+        \cf9 printf\cf4 (\cf7 "ans = %d\\n"\cf4 , ans);\
+        \cf9 print_ans\cf4 (best);\
+        \cf9 printf\cf4 (\cf7 "\\n"\cf4 );\
+    \}\
+    \cf6 return\cf4  \cf9 0\cf4 ;\
+\}  \
+\
+\
+\
+//
+\f1 \'d5\'e2\'b8\'f6\'ca\'c7\'d7\'d4\'bc\'ba\'d0\'b4\'b5\'c4\'b0\'e6\'b1\'be
+\f0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2 \cf1 \cb0 \kerning1\expnd0\expndtw0 #include \cf10 <iostream>\
+\cf1 #include \cf10 <string>\
+\cf1 #include \cf10 <algorithm>\
+\cf1 #include \cf10 <cstdio>\
+\cf11 using namespace \cf12 std\cf1 ;\
+#define 
+\f3\b \cf13 LOCAL\
+
+\f2\b0 \cf11 const int \cf1 maxn = \cf14 1000\cf1 ;\
+\cf11 int \cf1 n;\
+\cf11 int \cf1 G[maxn][maxn];\
+\cf11 int \cf1 raw[maxn][\cf14 2\cf1 ];\
+\cf11 int \cf1 dp[maxn];\
+\
+\cf11 void \cf15 getRaw\cf1 ()\{\
+    cin\cf16 >>\cf1 n;\
+    \cf11 for \cf1 (\cf11 int \cf1 i = \cf14 0\cf1 ; i < n; i++)\
+        cin\cf16 >>\cf1 raw[i][\cf14 0\cf1 ]\cf16 >>\cf1 raw[i][\cf14 1\cf1 ];\
+\}\
+\
+\cf11 int \cf15 solve\cf1 (\cf11 int \cf1 i)\{\
+    dp[i];\
+\
+    \cf11 if\cf1 (dp[i])\
+        \cf11 return \cf1 dp[i];\
+\
+    dp[i] = \cf14 1\cf1 ;\
+\
+    \cf11 for \cf1 (\cf11 int \cf1 j = \cf14 0\cf1 ; j < n; j++)\
+        \cf11 if\cf1 (G[i][j])\
+            dp[i]= \cf17 max\cf1 (dp[i], \cf17 solve\cf1 (j)+\cf14 1\cf1 );\
+\
+    \cf11 return \cf1 dp[i];\
+\}\
+\
+\cf11 int \cf15 judge\cf1 (\cf11 int \cf1 a,\cf11 int \cf1 b,\cf11 int \cf1 x, \cf11 int \cf1 y)\{\
+    \cf11 if\cf1 ( (a>x && b>y )|| (a>y && b>x) )\
+        \cf11 return \cf14 1\cf1 ;\
+    \cf11 if\cf1 ( (a<x && b<y) || (a<y && b<x) )\
+        \cf11 return \cf14 2\cf1 ;\
+    \cf11 else return \cf14 0\cf1 ;\
+\}\
+\
+\cf11 void \cf15 buildG\cf1 ()\{\
+    \cf11 for \cf1 (\cf11 int \cf1 i = \cf14 0\cf1 ; i < n; i++)\
+        \cf11 for \cf1 (\cf11 int \cf1 j = i; j < n; j++)\{\
+            \cf11 if\cf1 (\cf17 judge\cf1 (raw[i][\cf14 0\cf1 ],raw[i][\cf14 1\cf1 ],raw[j][\cf14 0\cf1 ],raw[j][\cf14 1\cf1 ])==\cf14 1\cf1 )\
+                G[i][j]=\cf14 1\cf1 ;\
+            \cf11 if\cf1 (\cf17 judge\cf1 (raw[i][\cf14 0\cf1 ],raw[i][\cf14 1\cf1 ],raw[j][\cf14 0\cf1 ],raw[j][\cf14 1\cf1 ])==\cf14 2\cf1 )\
+                G[j][i]=\cf14 1\cf1 ;\
+        \}\
+\}\
+\
+\cf11 int \cf15 main\cf1 () \{\
+#ifdef 
+\f3\b \cf13 LOCAL\
+    
+\f2\b0 \cf17 freopen\cf1 (\cf10 "/Users/robertwong/CLionProjects/untitled4/datain.txt"\cf1 ,\cf10 "r"\cf1 ,
+\f3\b \cf13 stdin
+\f2\b0 \cf1 );\
+#endif\
+    \cf17 getRaw\cf1 ();\
+    \cf17 buildG\cf1 ();\
+    \cf11 int \cf1 temp=\cf14 0\cf1 ;\
+\
+    \cf11 for \cf1 (\cf11 int \cf1 i = \cf14 0\cf1 ; i < n; i++)\{\
+        \cf11 if\cf1 (\cf17 solve\cf1 (i)>temp)\
+            temp=\cf17 solve\cf1 (i);\
+    \}\
+    cout\cf16 <<\cf1 temp;\
+\
+    \cf11 return \cf14 0\cf1 ;\
+\}\
+\
+\
+}

@@ -1,0 +1,65 @@
+{\rtf1\ansi\ansicpg936\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset134 PingFangSC-Regular;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #include <iostream>\
+#include <string>\
+using namespace std;\
+\
+//
+\f1 \'b6\'a8\'d2\'e5\'bd\'da\'b5\'e3
+\f0 \
+struct Node\
+\{\
+    bool haveValue;\
+    int value;\
+    Node *left,*right;\
+    Node():haveValue(false),left(NULL),right(NULL)\{\};\
+\};\
+\
+//
+\f1 \'c9\'ea\'c7\'eb\'d0\'c2\'b5\'c4\'bd\'da\'b5\'e3
+\f0 \
+Node* newNode()\
+\{\
+    return new Node();\
+\}\
+\
+Node* root=newNode();\
+\
+//
+\f1 \'b6\'d4\'d2\'bb\'b8\'f6\'d6\'b8\'b6\'a8\'bd\'da\'b5\'e3\'b8\'b3\'d6\'b5
+\f0 \
+void addNode(int v,string str)\
+\{\
+    Node *u=root;\
+    for(auto iter=str.begin();iter!=str.end();iter++)\
+    \{\
+        if(*iter=='L')\
+        \{\
+            if(u->left==NULL) u->left=newNode();\
+            u=u->left;\
+        \}\
+        else if(*iter=='R')\
+        \{\
+            if(u->right==NULL) u->right=newNode();\
+            u=u->right;\
+        \}\
+    \}\
+    u->haveValue=true;\
+    u->value=v;\
+\}\
+\
+//
+\f1 \'c7\'e5\'b3\'fd\'cb\'f9\'d3\'d0\'bd\'da\'b5\'e3
+\f0 \
+void remove(Node *u)\
+\{\
+    if(!u->haveValue) return;\
+    if(u->left!=NULL) remove(u->left);\
+    if(u->right!=NULL) remove(u->right);\
+    delete u;\
+\}}
