@@ -18,10 +18,10 @@ class Solution {
         for(int i = 0; i < m; ++i){
             win[s2.charAt(i) - 'a']++;
         }
-        int p = m;
+        int p = m - 1;
         while(p < s2.length()){
             if(check(raw, win)) return true;
-            win[s2.charAt(p - m) - 'a']--;
+            win[s2.charAt(p - m + 1) - 'a']--;
             p++;
             if(p < s2.length())
                 win[s2.charAt(p) - 'a']++;
