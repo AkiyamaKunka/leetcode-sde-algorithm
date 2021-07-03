@@ -3,17 +3,15 @@ class Solution {
     public int subarraySum(int[] nums, int k) {
         int n = nums.length;
         int ans = 0;
-        int [] sum = new int[n];
         int pre = 0;
-        for(int i = 0; i < n; ++i){
-            sum[i] = pre + nums[i];
-            pre = sum[i];
+        Map<Integer, Integer> map = new HashMap<>();
+        //map.put(0, 1); // before index of 0, the sum is 0, exist one like that
+        for(int num : nums){
+            pre += num;
+            if(map.containsKey(pre - k)) ans += map.get(pre - k);
+            map.put(pre, map.getOrDefault(pre, 0) + 1);
         }
-        for(int i = 0; i < n; ++i){
-            for(int j = i; j < n; ++j){
-                if(sum[j] - sum[i] + nums[i] == k) ans++;
-            }
-        }
+
         return ans;
     }
 }
