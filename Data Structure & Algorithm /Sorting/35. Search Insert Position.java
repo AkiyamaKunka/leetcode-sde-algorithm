@@ -12,5 +12,6 @@ class Solution {
     public int searchInsert(int[] nums, int target) {
         int ans = search(nums, target, 0, nums.length - 1);
         return ans;
+
     }
 }
