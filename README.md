@@ -1,63 +1,104 @@
 # Akiyama \'s LeetCode Note
 
-This is AkiyamaKunka's Repository, stored his record on work of Algorithms.
+Akiyama's Repository, recorded of effort on Algorithms.
+
+### 链表
+
+[328. Odd Even Linked List](https://leetcode-cn.com/problems/odd-even-linked-list/)
+
+21.9.8 边界条件容易出错的链表题
+
+#### 并查集
+
+[695. Max Area of Island](https://leetcode-cn.com/problems/max-area-of-island/)
+
+21.8.27 带Size的并查集
 
 
 
+#### 分治算法
+
+[395. Longest Substring with At Least K Repeating Characters](https://leetcode-cn.com/problems/longest-substring-with-at-least-k-repeating-characters/)
+
+21.8.23 比较难的一道题，我自己没有写出来。递归实现分治较易出错。
+
+可以用滑动窗口做，但是代码写起来很麻烦。
 
 
-#### Two Pointers
+
+#### 二分搜索
+
+[162. Find Peak Element](https://leetcode-cn.com/problems/find-peak-element/) 
+
+21.8.23 二分搜索减少寻找区域
 
 
 
-#### [611. Valid Triangle Number](https://leetcode-cn.com/problems/valid-triangle-number/) 21.8.4 Using the condition to judge the valid triangle.
+#### 双指针
+
+[611. Valid Triangle Number](https://leetcode-cn.com/problems/valid-triangle-number/) 
+
+21.8.4 Using the condition to judge the valid triangle.
 
 **2 pointers, but assign an upper boundary **. Make sure to optimize the answers, just using minus, not traver all solutions...
 
-#### [202. Happy Number](https://leetcode-cn.com/problems/happy-number/)  快慢指针 21.8.20
+[202. Happy Number](https://leetcode-cn.com/problems/happy-number/)  
 
-#### [15. 3sum](https://leetcode-cn.com/problems/3sum/) 双指针 21.8.20
 
-#### [160. Intersection of Two Linked Lists](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) 用长度的结论恰好得到两个链表的交点，同样使用了双指针
+
+#### 快慢指针
+
+[15. 3sum](https://leetcode-cn.com/problems/3sum/)  21.8.20
+
+[160. Intersection of Two Linked Lists](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) 用长度的结论恰好得到两个链表的交点，同样使用了双指针
 
 
 
 #### 字典树
 
-#### [208. Implement Trie (Prefix Tree) ](https://leetcode-cn.com/problems/implement-trie-prefix-tree/) 21.7.13
+[208. Implement Trie (Prefix Tree) ](https://leetcode-cn.com/problems/implement-trie-prefix-tree/) 21.7.13
 
 每个节点都有一个 ```HashMap<String, Node>```
 
 既储存了全部Son ```Node```拥有的Char(stored in ```String```) ，又能用```Map```映射到Son Node获得对象，进行下一步操作
 
-#### 7.11 两次使用单调栈
-
-确定未排序子序列的左右边界位置
-
-#### [581. Shortest Unsorted Continuous Subarray](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/)
 
 
+#### 单调栈
 
-#### 7.10 树的递归遍历
+21.7.11两次使用单调栈，确定未排序子序列的左右边界位置
 
-#### [98. Validate Binary Search Tree](https://leetcode-cn.com/problems/validate-binary-search-tree/)
-
-用recursion就能做出来，只需要return树的种类即可，并不是BackTracking
+[581. Shortest Unsorted Continuous Subarray](https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/)
 
 
 
-#### 7.9 Floyd 判圈算法
+#### 树的递归遍历
 
-两个数学公式，一个结论 可以推出直线长度的一个关系。复习下面这道题就足以了
+[98. Validate Binary Search Tree](https://leetcode-cn.com/problems/validate-binary-search-tree/)
 
-#### [287. Find the Duplicate Number](https://leetcode-cn.com/problems/find-the-duplicate-number/)
+21.7.21用recursion就能做出来，只需要return树的种类即可，并不是BackTracking
 
 
 
-#### 7.3 PreSum + Frequency的技巧
+#### Floyd判圈算法
 
-#### [560. Subarray Sum Equals K](https://leetcode-cn.com/problems/subarray-sum-equals-k/)
+21.7.9 两个数学公式，一个结论 可以推出直线长度的一个关系。复习下面这道题就足以了
 
-HashMap储存Sum Frequencies PreSum + Linear Scanning 优化到O(N)
+[287. Find the Duplicate Number](https://leetcode-cn.com/problems/find-the-duplicate-number/)
 
+
+
+#### PreSum + Frequency的技巧
+
+[560. Subarray Sum Equals K](https://leetcode-cn.com/problems/subarray-sum-equals-k/)
+
+21.7.3 HashMap储存Sum Frequencies PreSum + Linear Scanning 优化到O(N)
+
+
+
+### 哈希
+
+[36. Valid Sudoku](https://leetcode-cn.com/problems/valid-sudoku/)
+
+21.9.8 用二维数组实现数独的哈希去重查询
 
