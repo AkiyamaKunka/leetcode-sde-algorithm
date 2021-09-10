@@ -36,6 +36,10 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 #### 双指针
 
+[38. Count and Say](https://leetcode-cn.com/problems/count-and-say/)
+
+21.9.9 非常经典的双指针 + 递归思想的题，值得重做
+
 [611. Valid Triangle Number](https://leetcode-cn.com/problems/valid-triangle-number/) 
 
 21.8.4 Using the condition to judge the valid triangle.
