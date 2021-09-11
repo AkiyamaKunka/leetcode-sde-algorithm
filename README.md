@@ -2,6 +2,18 @@
 
 Akiyama's Repository, recorded of effort on Algorithms.
 
+
+
+### 贪心
+
+[179. Largest Number](https://leetcode-cn.com/problems/largest-number/)
+
+21.9.10 涉及快排的比较器，StringBuilder的使用。经典的贪心问题，但是证明完备性比较复杂
+
+[134. Gas Station](https://leetcode-cn.com/problems/gas-station/)
+
+21.9.10直观地想到，前缀和最低点的后一个点是最佳起点，以它为起点的后半段一定是能走通的，再保证全程有盈余，就可以走完全程
+
 ### 链表
 
 [328. Odd Even Linked List](https://leetcode-cn.com/problems/odd-even-linked-list/)
