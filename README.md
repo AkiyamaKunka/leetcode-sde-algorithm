@@ -4,6 +4,14 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 
 
+### 回文串
+
+[5869. Maximum Product of the Length of Two Palindromic Subsequences](https://leetcode-cn.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/)
+
+21.9.11 没做出来的题，用dfs做，思路非常简单，建议重做
+
+
+
 ### 贪心
 
 [179. Largest Number](https://leetcode-cn.com/problems/largest-number/)
