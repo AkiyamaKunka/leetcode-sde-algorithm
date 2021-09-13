@@ -2,8 +2,6 @@
 
 Akiyama's Repository, recorded of effort on Algorithms.
 
-
-
 ### 回文串
 
 [5869. Maximum Product of the Length of Two Palindromic Subsequences](https://leetcode-cn.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/)
@@ -28,15 +26,17 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 21.9.8 边界条件容易出错的链表题
 
-#### 并查集
+### 并查集
+
+
 
 [695. Max Area of Island](https://leetcode-cn.com/problems/max-area-of-island/)
 
 21.8.27 带Size的并查集
 
+### 分治
 
 
-#### 分治算法
 
 [395. Longest Substring with At Least K Repeating Characters](https://leetcode-cn.com/problems/longest-substring-with-at-least-k-repeating-characters/)
 
@@ -44,17 +44,19 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 可以用滑动窗口做，但是代码写起来很麻烦。
 
+### 二分搜索
 
 
-#### 二分搜索
 
 [162. Find Peak Element](https://leetcode-cn.com/problems/find-peak-element/) 
 
 21.8.23 二分搜索减少寻找区域
 
+[378. Kth Smallest Element in a Sorted Matrix](https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix/)
+
+### 双指针
 
 
-#### 双指针
 
 [38. Count and Say](https://leetcode-cn.com/problems/count-and-say/)
 
@@ -70,15 +72,25 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 
 
-#### 快慢指针
+### 快慢指针
 
 [15. 3sum](https://leetcode-cn.com/problems/3sum/)  21.8.20
 
 [160. Intersection of Two Linked Lists](https://leetcode-cn.com/problems/intersection-of-two-linked-lists/) 用长度的结论恰好得到两个链表的交点，同样使用了双指针
 
+Floyd 判圈算法 [287. Find the Duplicate Number](https://leetcode-cn.com/problems/find-the-duplicate-number/)
+
+21.7.9 两个数学公式，一个结论 可以推出直线长度的一个关系。复习下面这道题就足以了
 
 
-#### 字典树
+
+
+
+
+
+### 字典树
+
+
 
 [208. Implement Trie (Prefix Tree) ](https://leetcode-cn.com/problems/implement-trie-prefix-tree/) 21.7.13
 
@@ -88,7 +100,9 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 
 
-#### 单调栈
+### 单调栈
+
+
 
 21.7.11两次使用单调栈，确定未排序子序列的左右边界位置
 
@@ -96,7 +110,9 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 
 
-#### 树的递归遍历
+### 树的遍历
+
+
 
 [98. Validate Binary Search Tree](https://leetcode-cn.com/problems/validate-binary-search-tree/)
 
@@ -104,15 +120,11 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 
 
-#### Floyd判圈算法
-
-21.7.9 两个数学公式，一个结论 可以推出直线长度的一个关系。复习下面这道题就足以了
-
-[287. Find the Duplicate Number](https://leetcode-cn.com/problems/find-the-duplicate-number/)
+#### 
 
 
 
-#### PreSum + Frequency的技巧
+### 前缀数组
 
 [560. Subarray Sum Equals K](https://leetcode-cn.com/problems/subarray-sum-equals-k/)
 
