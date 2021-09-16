@@ -2,6 +2,10 @@
 
 Akiyama's Repository, recorded of effort on Algorithms.
 
+
+
+
+
 ### 回文串
 
 [5869. Maximum Product of the Length of Two Palindromic Subsequences](https://leetcode-cn.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/)
@@ -137,4 +141,12 @@ Floyd 判圈算法 [287. Find the Duplicate Number](https://leetcode-cn.com/prob
 [36. Valid Sudoku](https://leetcode-cn.com/problems/valid-sudoku/)
 
 21.9.8 用二维数组实现数独的哈希去重查询
+
+[380. Insert Delete GetRandom O(1)](https://leetcode-cn.com/problems/insert-delete-getrandom-o1/)
+
+21.9.15 非常棒的时间复杂度的题目，用动袋数组和Hash表实现了增、删、随机抽取的O(1)算法
+
+[454. 4Sum II](https://leetcode-cn.com/problems/4sum-ii/)
+
+21.9.15 用哈希表完成了sum4（2）的计算，非常套路，可以想想dfs怎么做。
 
