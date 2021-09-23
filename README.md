@@ -6,6 +6,18 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 
 
+### 桶思想
+
+[621. Task Scheduler](https://leetcode-cn.com/problems/task-scheduler/)
+
+我们设计桶的大小为 n+1，则相同的任务恰好不能放入同一个桶，最密也只能放入相邻的桶。
+
+对于重复的任务，我们只能将每个都放入不同的桶中，因此桶的个数就是重复次数最多的任务的个数。
+
+一个桶不管是否放满，其占用的时间均为 n+1，这是因为后面桶里的任务需要等待冷却时间。最后一个桶是个特例，由于其后没有其他任务需等待，所以占用的时间为桶中的任务个数。
+
+
+
 ### 回文串
 
 [5869. Maximum Product of the Length of Two Palindromic Subsequences](https://leetcode-cn.com/problems/maximum-product-of-the-length-of-two-palindromic-subsequences/)
