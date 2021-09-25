@@ -134,9 +134,9 @@ Floyd 判圈算法 [287. Find the Duplicate Number](https://leetcode-cn.com/prob
 
 21.7.21用recursion就能做出来，只需要return树的种类即可，并不是BackTracking
 
+[106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode-cn.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/)
 
-
-#### 
+21.9.24 post + in 求树，记住用HashMap做查询
 
 
 
