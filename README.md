@@ -146,6 +146,10 @@ Floyd 判圈算法 [287. Find the Duplicate Number](https://leetcode-cn.com/prob
 
 21.7.3 HashMap储存Sum Frequencies PreSum + Linear Scanning 优化到O(N)
 
+[525. Contiguous Array](https://leetcode-cn.com/problems/contiguous-array/)
+21.9.28 HashMap储存0,1数量数组的前缀的和，非常值得重做的题。
+
+
 
 
 ### 哈希
