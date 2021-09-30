@@ -3,6 +3,10 @@
 Akiyama's Repository, recorded of effort on Algorithms.
 
 
+### 比较器的写法
+
+[56. Merge Intervals](https://leetcode-cn.com/problems/merge-intervals/)
+21.9.29 建议熟背
 
 
 
