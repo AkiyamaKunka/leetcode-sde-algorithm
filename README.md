@@ -6,6 +6,7 @@ Akiyama's Repository, recorded of effort on Algorithms.
 ### 比较器的写法
 
 [56. Merge Intervals](https://leetcode-cn.com/problems/merge-intervals/)
+
 21.9.29 建议熟背
 
 
@@ -154,6 +155,9 @@ Floyd 判圈算法 [287. Find the Duplicate Number](https://leetcode-cn.com/prob
 
 21.9.28 HashMap储存0,1数量数组的前缀的和，非常值得重做的题。
 
+[1249. Minimum Remove to Make Valid Parentheses](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/)
+
+21.9.30 美服LC高频题，用一个factor储存左右括号的数量，思想和Prefix如出一辙，比较套路，看了提示才做出来，建议重新做。
 
 
 
