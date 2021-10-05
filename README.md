@@ -2,11 +2,11 @@
 
 Akiyama's Repository, recorded of effort on Algorithms.
 
-
 ### 动态规划
 
 [1218. Longest Arithmetic Subsequence of Given Difference](https://leetcode-cn.com/problems/longest-arithmetic-subsequence-of-given-difference/)
 
+入门动态规划，求最长子等差数列，基本题
 
 ### 比较器的写法
 
