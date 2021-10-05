@@ -3,6 +3,11 @@
 Akiyama's Repository, recorded of effort on Algorithms.
 
 
+### 动态规划
+
+[1218. Longest Arithmetic Subsequence of Given Difference](https://leetcode-cn.com/problems/longest-arithmetic-subsequence-of-given-difference/)
+
+
 ### 比较器的写法
 
 [56. Merge Intervals](https://leetcode-cn.com/problems/merge-intervals/)
