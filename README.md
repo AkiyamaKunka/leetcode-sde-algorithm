@@ -8,6 +8,10 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 入门动态规划，求最长子等差数列，基本题
 
+[1048. Longest String Chain](https://leetcode-cn.com/problems/longest-string-chain/)
+
+入门动态规划，求最长字符串链，基本题
+
 ### 比较器的写法
 
 [56. Merge Intervals](https://leetcode-cn.com/problems/merge-intervals/)
