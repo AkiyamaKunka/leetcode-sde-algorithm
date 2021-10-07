@@ -18,7 +18,18 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 21.9.29 建议熟背
 
+### 最大/小堆的写法
 
+[692. Top K Frequent Words](https://leetcode-cn.com/problems/top-k-frequent-words/)
+
+21.10.7建议熟背
+
+### 单调栈
+[316. Remove Duplicate Letters](https://leetcode-cn.com/problems/remove-duplicate-letters/)
+
+有四道题和本题有相同思想。本题设计核心是字符串的字典序比较。较为套路。
+
+21.10.7
 
 ### 桶思想
 
