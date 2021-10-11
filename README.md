@@ -12,6 +12,11 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 入门动态规划，求最长字符串链，基本题
 
+[45. Jump Game II](https://leetcode-cn.com/problems/jump-game-ii/)
+
+入门动态规划，队列中的跳跃 + 贪心
+
+
 ### 比较器的写法
 
 [56. Merge Intervals](https://leetcode-cn.com/problems/merge-intervals/)
