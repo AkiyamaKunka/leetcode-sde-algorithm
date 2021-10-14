@@ -16,6 +16,13 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 入门动态规划，队列中的跳跃 + 贪心
 
+[1143. Longest Common Subsequence](https://leetcode-cn.com/problems/longest-common-subsequence/)
+
+动态规划二维经典题
+
+[120. Triangle](https://leetcode-cn.com/problems/triangle/)
+
+动态规划二维神级经典题
 
 ### 比较器的写法
 
