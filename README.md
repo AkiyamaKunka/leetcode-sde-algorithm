@@ -24,6 +24,8 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 动态规划二维神级经典题
 
+[131. Palindrome Partitioning](https://leetcode-cn.com/problems/palindrome-partitioning/)
+
 ### 比较器的写法
 
 [56. Merge Intervals](https://leetcode-cn.com/problems/merge-intervals/)
