@@ -26,6 +26,16 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 [131. Palindrome Partitioning](https://leetcode-cn.com/problems/palindrome-partitioning/)
 
+动态规划二维状态解决回文串问题
+
+[647. Palindromic Substrings](https://leetcode-cn.com/problems/palindromic-substrings/)
+
+动态规划一维状态解决字符串种类问题
+
+[91. Decode Ways](https://leetcode-cn.com/problems/decode-ways/)
+
+
+
 ### 比较器的写法
 
 [56. Merge Intervals](https://leetcode-cn.com/problems/merge-intervals/)
