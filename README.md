@@ -232,3 +232,8 @@ Floyd 判圈算法 [287. Find the Duplicate Number](https://leetcode-cn.com/prob
 
 21.9.15 用哈希表完成了sum4（2）的计算，非常套路，可以想想dfs怎么做。
 
+### 溢出
+
+[166. Fraction to Recurring Decimal](https://leetcode-cn.com/problems/fraction-to-recurring-decimal/)
+
+用long处理int，注意int的范围是-2^n ~ 2^n - 1，还会有一个非常隐秘的溢出
