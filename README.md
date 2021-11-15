@@ -155,6 +155,9 @@ Floyd 判圈算法 [287. Find the Duplicate Number](https://leetcode-cn.com/prob
 
 利用了BST性质的递归法，求所有可能的BST
 
+[4. Median of Two Sorted Arrays](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)
+
+找中位数的题，思维难度较大，边界条件容易出错，很难debug
 
 ### 回溯
 
