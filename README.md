@@ -247,3 +247,9 @@ Floyd 判圈算法 [287. Find the Duplicate Number](https://leetcode-cn.com/prob
 [6. ZigZag Conversion](https://leetcode-cn.com/problems/zigzag-conversion/)
 
 实质就是模拟，不要硬追求数学公式
+
+### 位运算
+
+[318. Maximum Product of Word Lengths](https://leetcode-cn.com/problems/maximum-product-of-word-lengths/)
+
+位运算基础题，用26bit长的int来代表了a-z这26个字母是否出现，
