@@ -253,3 +253,14 @@ Floyd 判圈算法 [287. Find the Duplicate Number](https://leetcode-cn.com/prob
 [318. Maximum Product of Word Lengths](https://leetcode-cn.com/problems/maximum-product-of-word-lengths/)
 
 位运算基础题，用26bit长的int来代表了a-z这26个字母是否出现，
+
+
+### 记忆化搜索
+
+[877. Stone Game](https://leetcode-cn.com/problems/stone-game/)
+
+DFS+memo，题意简单
+
+[1140. Stone Game II](https://leetcode-cn.com/problems/stone-game-ii/)
+
+DFS + Memo，题意略微复杂，使用前缀和数组，建议重做
