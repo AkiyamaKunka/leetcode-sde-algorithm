@@ -119,6 +119,12 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 [378. Kth Smallest Element in a Sorted Matrix](https://leetcode-cn.com/problems/kth-smallest-element-in-a-sorted-matrix/)
 
+
+[74. Search a 2D Matrix](https://leetcode-cn.com/problems/search-a-2d-matrix/)
+
+在这道题，我想强调二分搜索的固定写法：如果array里找不到target，那么 r 就应该是 while循环退出之后，array[r] 恰好小于 target的位置
+
+
 ### 双指针
 
 
