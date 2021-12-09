@@ -270,3 +270,12 @@ DFS+memo，题意简单
 [1140. Stone Game II](https://leetcode-cn.com/problems/stone-game-ii/)
 
 DFS + Memo，题意略微复杂，使用前缀和数组，建议重做
+
+[494. Target Sum](https://leetcode-cn.com/problems/target-sum/)
+
+使用了HashMap的记忆化搜索，用一个String记录两个状态
+
+[576. Out of Boundary Paths](https://leetcode-cn.com/problems/out-of-boundary-paths/)
+
+使用了int[][]的记忆化搜索，适合两个状态都是数量较小的证书的情况
+
