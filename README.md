@@ -111,7 +111,7 @@ Akiyama's Repository, recorded of effort on Algorithms.
 
 ### 二分搜索
 
-
+[二分查找LeetCode神贴：可做参考](https://leetcode.cn/circle/discuss/ooxfo8/)
 
 [162. Find Peak Element](https://leetcode-cn.com/problems/find-peak-element/) 
 
